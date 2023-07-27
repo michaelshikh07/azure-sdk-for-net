@@ -348,6 +348,21 @@ namespace Azure.ResourceManager.Kusto.Models
             return new KustoScriptData(id, name, resourceType, systemData, scriptUri, scriptUriSasToken, scriptContent, forceUpdateTag, shouldContinueOnErrors, provisioningState);
         }
 
+        /// <summary> Initializes a new instance of SandboxCustomImageData. </summary>
+        /// <param name="id"> The id. </param>
+        /// <param name="name"> The name. </param>
+        /// <param name="resourceType"> The resourceType. </param>
+        /// <param name="systemData"> The systemData. </param>
+        /// <param name="language"> The language name, for example Python. </param>
+        /// <param name="languageVersion"> The version of the language. </param>
+        /// <param name="requirementsFileContent"> The requirements file content. </param>
+        /// <param name="provisioningState"> The provisioned state of the resource. </param>
+        /// <returns> A new <see cref="Kusto.SandboxCustomImageData"/> instance for mocking. </returns>
+        public static SandboxCustomImageData SandboxCustomImageData(ResourceIdentifier id = null, string name = null, ResourceType resourceType = default, SystemData systemData = null, Language? language = null, string languageVersion = null, string requirementsFileContent = null, KustoProvisioningState? provisioningState = null)
+        {
+            return new SandboxCustomImageData(id, name, resourceType, systemData, language, languageVersion, requirementsFileContent, provisioningState);
+        }
+
         /// <summary> Initializes a new instance of KustoManagedPrivateEndpointData. </summary>
         /// <param name="id"> The id. </param>
         /// <param name="name"> The name. </param>
